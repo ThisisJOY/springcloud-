@@ -1,0 +1,64 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: lagou-service-email
+  cloud:
+    nacos:
+      discovery:
+        namespace: public
+        ################ 配置nacos server地址
+        server-addr: 127.0.0.1:8848
+      # nacos config 配置
+      config:
+        server-addr: 127.0.0.1:8848
+        # 锁定server端的配置文件（读取它的配置项）
+        namespace: public  # 命名空间id
+        group: DEFAULT_GROUP  # 默认分组就是DEFAULT_GROUP，如果使用默认分组可以不配置
+        file-extension: yaml   #默认properties
+        # 根据规则拼接出来的dataId效果：lagou-service-email.yaml
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${email.username}
+    password: lyq520025
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=Europe/Amsterdam
+    username: root
+    password: root
+  jpa:
+    database: MySQL
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl  #避免将驼峰命名转换为下划线命名
+  main:
+    allow-bean-definition-overriding: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+dubbo:
+  scan:
+    # dubbo 服务扫描基准包
+    base-packages: com.lagou.edu.service.impl
+  protocol:
+    # dubbo 协议
+    name: dubbo
+    # dubbo 协议端口（ -1 表示自增端口，从 20880 开始）
+    port: -1
+    host: 127.0.0.1
+  registry:
+    # 挂载到 Spring Cloud 的注册中心
+    address: spring-cloud://localhost
+  cloud:
+    # 订阅服务提供方的应用列表，订阅多个服务提供者使用 "," 连接
+    subscribed-services: lagou-service-email

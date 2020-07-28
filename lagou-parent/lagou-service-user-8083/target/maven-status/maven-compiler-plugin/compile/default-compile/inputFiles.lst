@@ -1,0 +1,10 @@
+/Users/liqiaoqiao/3_5_workspace/lagou-parent/lagou-service-user-8080/src/main/java/com/lagou/edu/dao/TokenDao.java
+/Users/liqiaoqiao/3_5_workspace/lagou-parent/lagou-service-user-8080/src/main/java/com/lagou/edu/pojo/Token.java
+/Users/liqiaoqiao/3_5_workspace/lagou-parent/lagou-service-user-8080/src/main/java/com/lagou/edu/feignclients/CodeFeignClient.java
+/Users/liqiaoqiao/3_5_workspace/lagou-parent/lagou-service-user-8080/src/main/java/com/lagou/edu/UserApplication8080.java
+/Users/liqiaoqiao/3_5_workspace/lagou-parent/lagou-service-user-8080/src/main/java/com/lagou/edu/dao/UserDao.java
+/Users/liqiaoqiao/3_5_workspace/lagou-parent/lagou-service-user-8080/src/main/java/com/lagou/edu/pojo/User.java
+/Users/liqiaoqiao/3_5_workspace/lagou-parent/lagou-service-user-8080/src/main/java/com/lagou/edu/feignclients/CodeFallBack.java
+/Users/liqiaoqiao/3_5_workspace/lagou-parent/lagou-service-user-8080/src/main/java/com/lagou/edu/service/impl/UserService.java
+/Users/liqiaoqiao/3_5_workspace/lagou-parent/lagou-service-user-8080/src/main/java/com/lagou/edu/controller/UserController.java
+/Users/liqiaoqiao/3_5_workspace/lagou-parent/lagou-service-user-8080/src/main/java/com/lagou/edu/service/impl/TokenService.java
